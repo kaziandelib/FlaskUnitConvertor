@@ -34,7 +34,7 @@ async function populateUnits(category) {
   // Clear current options
   fromUnitSelect.innerHTML = '<option value="" disabled selected>Select unit</option>';
   toUnitSelect.innerHTML = '<option value="" disabled selected>Select unit</option>';
-  resultDiv.textContent = '';  // Clear result on category change
+  resultDiv.textContent = '';  
 
   try {
     const res = await fetch(`/units/${category}`);
