@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Unit Converter</h1>
+
+    <div class="toggle-theme-container">
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider round"></span>
+      </label>
+      <span>Toggle Dark/Light Mode</span>
+    </div>
+
+    <form id="convertForm" onsubmit="return false;">
+      <label for="category">Select Category:</label>
+      <select id="category" required>
+        <option value="" disabled selected>Select a category</option>
+      </select>
+
+      <label for="inputValue">Enter Value:</label>
+      <input type="number" id="inputValue" step="any" required />
+
+      <div class="unit-row">
+        <div>
+          <label for="fromUnit">From Unit:</label>
+          <select id="fromUnit" required>
+            <option value="" disabled selected>Select unit</option>
+          </select>
+        </div>
+
+        <button id="swapUnits" type="button" title="Swap Units">⇄</button>
+
+        <div>
+          <label for="toUnit">To Unit:</label>
+          <select id="toUnit" required>
+            <option value="" disabled selected>Select unit</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="convertBtn" type="submit">Convert</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

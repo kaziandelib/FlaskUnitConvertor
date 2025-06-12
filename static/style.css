@@ -1,0 +1,195 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Light theme */
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 480px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Form styles */
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.unit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.unit-row > div {
+  flex: 1;
+}
+
+#swapUnits {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#swapUnits:hover {
+  background-color: #0056b3;
+}
+
+/* Convert button */
+#convertBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#convertBtn:hover {
+  background-color: #19692c;
+}
+
+/* Result box */
+.result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e9ecef;
+  border-radius: 7px;
+  min-height: 50px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark .container {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark input[type="number"],
+body.dark select {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+body.dark input[type="number"]:focus,
+body.dark select:focus {
+  border-color: #66afe9;
+}
+
+body.dark .result {
+  background-color: #333;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.toggle-theme-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
